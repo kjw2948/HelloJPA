@@ -12,23 +12,10 @@ public class JpaMain {
         tx.begin();
 
         try {
-
-            //비영속 상태
-
-            Member member = new Member();
-            member.setId(100L);
-            member.setName("HelloJPA");
-
-
-            //엔티티 영속
-            em.persist(member);  // 영속 상태가 됨 --> Entity Manager를 통해 member를 관리함
-
-            Member findMember = em.find(Member.class, 100L);
-            Member findMember2 = em.find(Member.class, 100L);
-            findMember.setName("박대기");
-            em.flush();
-            //
-            System.out.println(findMember == findMember2);
+            //Member member = new Member(100L, "hhh");
+            //em.persist(member);
+            Member member = em.find(Member.class, 100L);
+            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
