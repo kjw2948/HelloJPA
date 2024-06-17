@@ -12,10 +12,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            //Member member = new Member(100L, "hhh");
-            //em.persist(member);
-            Member member = em.find(Member.class, 100L);
-            em.persist(member);
 
             tx.commit();
         } catch (Exception e) {
