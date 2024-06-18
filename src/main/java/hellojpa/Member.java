@@ -27,8 +27,6 @@ public class Member {
     public Member() {
     }
 
-
-
     public Long getId() {
         return id;
     }
@@ -44,4 +42,13 @@ public class Member {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void setTeam(Team team) {
+        this.team = team;
+    }
+
 }
