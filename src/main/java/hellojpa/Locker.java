@@ -11,4 +11,6 @@ public class Locker {
 
     private String name;
 
+    @OneToOne(mappedBy = "locker") // Member에 locker가 연관관계 주인
+    private Member member; // 읽기 전용
 }
