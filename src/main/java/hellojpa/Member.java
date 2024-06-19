@@ -15,6 +15,10 @@ public class Member {
     @Column(name = "USERNAME") // DB 테이블에 저장되는 column 이름이 name
     private String username;
 
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
     /*
     @Column(name = "TEAM_ID")
     private Long teamId;
