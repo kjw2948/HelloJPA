@@ -21,7 +21,7 @@ public class Member {
      */
 
     @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
+    @JoinColumn(name = "TEAM_ID") // FK를 나타냄
     private Team team;
 
     public Member() {

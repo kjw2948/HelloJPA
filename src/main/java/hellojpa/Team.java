@@ -13,8 +13,9 @@ public class Team {
     private Long id;
     private String username;
 
-    @OneToMany(mappedBy = "team")
+    @OneToMany(mappedBy = "team") // mappedBy -> 단순 읽기만 가능
     private List<Member> members = new ArrayList<>();
+    // DB상에는 나타나지 않는 값이지만 Team 하나당 여러 Member가 존재하므로 생성하고 매핑
 
     public Long getId() {
         return id;
