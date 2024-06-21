@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Member {
+public class MemberEx {
 
     @Id
     @Column(name = "MEMBER_ID")

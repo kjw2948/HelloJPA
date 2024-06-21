@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Item {
+public class ItemEx {
     @Id
     @Column(name = "ITEM_ID")
     private Long id;
