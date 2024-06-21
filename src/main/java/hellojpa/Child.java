@@ -3,7 +3,7 @@ package hellojpa;
 import jakarta.persistence.*;
 
 @Entity
-public class Child extends Parent{
+public class Child{
     @Id @GeneratedValue
     private Long id;
 
@@ -13,22 +13,21 @@ public class Child extends Parent{
     @JoinColumn(name = "parent_id")
     private Parent parent;
 
-    @Override
+
     public Long getId() {
         return id;
     }
 
-    @Override
+
     public void setId(Long id) {
         this.id = id;
     }
 
-    @Override
+
     public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
